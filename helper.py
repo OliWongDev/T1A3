@@ -11,3 +11,11 @@ def pick_difficulty():
     diff_options = ['Easy', 'Medium', 'Hard']
     diff_option, not_needed2 = pick(diff_options, title)
     return diff_option
+
+# Remove duplicates function
+def remove_duplicates(words):
+    result = []
+    for word in words:
+        if word not in result:
+            result.append(word)
+    return result

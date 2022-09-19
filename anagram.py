@@ -7,13 +7,15 @@ from letter_frequency import choose_consonant, choose_vowel
 
 
 
+
+
 class Anagram:
 
     def __init__(self, rounds, difficulty):
         self.rounds = rounds
         self.difficulty = difficulty
 
-
+# Function: User chooses vowels or consonants to form 9 letter anagram puzzle 
     def choose_letters(self):
         letter_list = []
         for letter in range(9):
@@ -29,18 +31,43 @@ class Anagram:
         return letter_list
 
 
-# Function: Generate word list
-    def possible_word_list(self):
+# Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
+    def possible_word_list(letters):
         word_list = []
-        
-        return word_list
+        for i in range(len(letters))
+            for x in list(permutations(letters, i))
+                y = " ".join(x)
+                if len(y) and y in english_words_set:
+                    word_list.append(y)
+        final_list = helper.remove_duplicates(word_list)
+        return final_list
+
 # Function: Calculate CPU's length of word with word list.
+    def cpu_score_calculator(final_list):
+        if pick_difficulty() == 'Easy':
+            cpu_word = final_list[round(len(final_list) * 0.25)]
+            cpu_score = len(cpu_word)
+        elif pick_difficulty() == 'Medium':
+            cpu_word = final_list[round(len(final_list) * 0.5)]
+            cpu_score = len(cpu_word)
+        elif pick_difficulty() == 'Hard':
+            cpu_word = final_list[round(len(final_list) * 0.8)]
+            cpu_score = len(cpu_word)
+        return cpu_score
+
 # Function: Shuffle Letters with user input 'S'
+    def shuffle_list_for_user(self):
+        letter_list = choose_letters()
+
 # Function: Hint to longest word function with user input 'H'
 # User input words
 # Function: Check word against english language
 # Function: Store input 3 times, tell user 3 guesses.
 # Tell user longest word
+
+    def disclose_longest_word(self):
+        longest_word = final_list[-1]
+        return longest_word
 # Repeat loop for 2nd round. Store win/lose/draw.
 
 # Final Screen "You won/lost/drew _ to _ against the CPU"
