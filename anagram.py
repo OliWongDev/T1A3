@@ -34,8 +34,8 @@ class Anagram:
 # Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
     def possible_word_list(letters):
         word_list = []
-        for i in range(len(letters))
-            for x in list(permutations(letters, i))
+        for i in range(len(letters)):
+            for x in list(permutations(letters, i)):
                 y = " ".join(x)
                 if len(y) and y in english_words_set:
                     word_list.append(y)
@@ -56,19 +56,38 @@ class Anagram:
         return cpu_score
 
 # Function: Shuffle Letters with user input 'S'
-    def shuffle_list_for_user(self):
-        letter_list = choose_letters()
-
 # Function: Hint to longest word function with user input 'H'
+    def hint_longest_word(self):
+        longest_word_length = len(final_list[-1])
+        return longest_word_length
+        print(f'The longest word is {longest_word_length} letters.')
+
+    
 # User input words
 # Function: Check word against english language
 # Function: Store input 3 times, tell user 3 guesses.
 # Tell user longest word
 
     def disclose_longest_word(self):
-        longest_word = final_list[-1]
+        longest_word = ''
+        for word in final_list:
+            if len(word) > len(longest_word):
+                longest_word = word
         return longest_word
+        print(f'The longest word was {len(longest_word)} letters: {longest_word}')
+
+        
 # Repeat loop for 2nd round. Store win/lose/draw.
 
 # Final Screen "You won/lost/drew _ to _ against the CPU"
+    def final_result(self):
+        if player_total > computer_total:
+            print(f"You beat the CPU {player_total} to {computer_total}")
+        elif player_total < computer_total:
+            print(f'You lost to the CPU {player_total} to {computer_total}')
+        elif player_total == computer_total:
+            print(f'You drew with the CPU {player_total} to {computer_total}')
+        
 # Play again or Quit
+
+    

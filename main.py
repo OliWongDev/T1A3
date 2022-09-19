@@ -2,7 +2,7 @@
 from english_words import english_words_set
 from helper import pick_difficulty, start_menu
 from letter_frequency import choose_consonant, choose_vowel
-import Anagram
+import anagram
 
 option = start_menu()
 if option == 'Play':
