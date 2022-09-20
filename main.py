@@ -6,7 +6,7 @@ from anagram import Anagram
 
 option = start_menu()
 if option == 'Play':
-    difficulty = pick_difficulty()
-    letter_list = Anagram.choose_letters()
-
+    #difficulty = pick_difficulty()
+    game = Anagram(1, pick_difficulty())
+    game.start()
 
