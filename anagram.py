@@ -109,11 +109,12 @@ class Anagram:
             possible_words = self.possible_word_list(letters)
             cpu_word, cpu_score = self.cpu_score_calculator(possible_words)
             longest_word = possible_words[-1]
+            print(f'The longest word possible is {len(longest_word)} letters.')
             guess = self.store_guesses()
             # End of Round
-            print(f"Your guess was: {guess}")
-            print(f"The computer's word was {cpu_word} for a score of {cpu_score} points.")
-            print(f"The longest word was {len(longest_word)} letters: {longest_word}.")
+            print(f"Your best guess was: {guess}")
+            print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
+            print(f"The longest word was {longest_word}.")
 
             self.final_result(len(guess), cpu_score)
     
