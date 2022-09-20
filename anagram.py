@@ -31,7 +31,7 @@ class Anagram:
         return letter_list
 
 
-# Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
+## Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
     def possible_word_list(letters):
         word_list = []
         for i in range(len(letters)):
@@ -42,21 +42,21 @@ class Anagram:
         final_list = helper.remove_duplicates(word_list)
         return final_list
 
-# Function: Calculate CPU's length of word with word list.
-    def cpu_score_calculator(final_list):
-        if pick_difficulty() == 'Easy':
+## Function: Calculate CPU's length of word with word list.
+    def cpu_score_calculator(self):
+        if self.difficulty == 'Easy':
             cpu_word = final_list[round(len(final_list) * 0.25)]
             cpu_score = len(cpu_word)
-        elif pick_difficulty() == 'Medium':
+        elif self.difficulty == 'Medium':
             cpu_word = final_list[round(len(final_list) * 0.5)]
             cpu_score = len(cpu_word)
-        elif pick_difficulty() == 'Hard':
+        elif self.difficulty == 'Hard':
             cpu_word = final_list[round(len(final_list) * 0.8)]
             cpu_score = len(cpu_word)
         return cpu_score
 
 # Function: Shuffle Letters with user input 'S'
-# Function: Hint to longest word function with user input 'H'
+## Function: Hint to longest word function with user input 'H'
     def hint_longest_word(self):
         longest_word_length = len(final_list[-1])
         return longest_word_length
@@ -65,8 +65,9 @@ class Anagram:
     
 # User input words
 # Function: Check word against english language
+
 # Function: Store input 3 times, tell user 3 guesses.
-# Tell user longest word
+## Tell user longest word
 
     def disclose_longest_word(self):
         longest_word = ''
@@ -77,9 +78,9 @@ class Anagram:
         print(f'The longest word was {len(longest_word)} letters: {longest_word}')
 
         
-# Repeat loop for 2nd round. Store win/lose/draw.
 
-# Final Screen "You won/lost/drew _ to _ against the CPU"
+
+## Final Screen "You won/lost/drew _ to _ against the CPU"
     def final_result(self):
         if player_total > computer_total:
             print(f"You beat the CPU {player_total} to {computer_total}")
@@ -88,6 +89,10 @@ class Anagram:
         elif player_total == computer_total:
             print(f'You drew with the CPU {player_total} to {computer_total}')
         
-# Play again or Quit
-
+## Home/Play Again or Quit
+    def end_choice(choice):
+        if choice == "Play Again":
+            # Restart game from difficulty option
+        elif choice == "Quit":
+            # Close Application
     
