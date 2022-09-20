@@ -59,9 +59,6 @@ class Anagram:
 
 # Function: Shuffle Letters with user input 'S'
 ## Function: Hint to longest word function with user input 'H'
-    def hint_longest_word(self, final_list):
-        return len(final_list[-1]), final_list[-1]
-
     
 # User input words
 # Function: Check word against english language
@@ -90,7 +87,7 @@ class Anagram:
             return self.store_guesses()
 
 ## Final Screen "You won/lost/drew _ to _ against the CPU"
-    def final_result(self):
+    def final_result(self, player_total, computer_total):
         if player_total > computer_total:
             print(f"You beat the CPU {player_total} to {computer_total}")
         elif player_total < computer_total:
@@ -111,6 +108,12 @@ class Anagram:
             letters = self.choose_letters()
             possible_words = self.possible_word_list(letters)
             cpu_word, cpu_score = self.cpu_score_calculator(possible_words)
-            longest_word_length, longest_word = self.hint_longest_word(possible_words)
-            print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
+            longest_word = possible_words[-1]
+            guess = self.store_guesses()
+            # End of Round
+            print(f"Your guess was: {guess}")
+            print(f"The computer's word was {cpu_word} for a score of {cpu_score} points.")
+            print(f"The longest word was {len(longest_word)} letters: {longest_word}.")
+
+            self.final_result(len(guess), cpu_score)
     
