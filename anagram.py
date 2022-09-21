@@ -26,14 +26,12 @@ class Anagram:
                 if consonant_counter < 6:
                     letter_list.append(choose_consonant())
                     consonant_counter += 1
-                    print("--> You picked a consonant!")
                 else:
                     print("Maximum number of consonants is 6. Please pick a vowel.")
             elif user_input == 'v':
                 if vowel_counter < 5:
                     letter_list.append(choose_vowel())
                     vowel_counter += 1
-                    print("--> You picked a vowel!")
                 else:
                     print("Maximum number of vowels is 5. Please pick a consonant.")
         
@@ -57,13 +55,13 @@ class Anagram:
 ## Function: Calculate CPU's length of word with word list.
     def cpu_score_calculator(self, final_list):
         if self.difficulty == 'Easy':
-            cpu_word = final_list[int(round(len(final_list) * 0.25))]
+            cpu_word = final_list[int(round(len(final_list) * 0.45))]
             cpu_score = len(cpu_word)
         elif self.difficulty == 'Medium':
-            cpu_word = final_list[int(round(len(final_list) * 0.5))]
+            cpu_word = final_list[int(round(len(final_list) * 0.65))]
             cpu_score = len(cpu_word)
         elif self.difficulty == 'Hard':
-            cpu_word = final_list[int(round(len(final_list) * 0.8))]
+            cpu_word = final_list[int(round(len(final_list) * 0.85))]
             cpu_score = len(cpu_word)
         return cpu_word, cpu_score
 
@@ -81,7 +79,8 @@ class Anagram:
             return False
 
 
-
+    def points_multipliers(self):
+        
 
 
 # Function: Store input 3 times, tell user 3 guesses.
@@ -106,14 +105,14 @@ class Anagram:
         else:
             return max(guessed_words, key = len)
 
-## Final Screen "You won/lost/drew _ to _ against the CPU"
+
     def round_result(self, player_total, computer_total):
         if player_total > computer_total:
-            print(f"You beat the CPU this round {player_total} to {computer_total}")
+            print(f'You beat the CPU {player_total} to {computer_total}')
         elif player_total < computer_total:
-            print(f'You lost to the CPU this round {player_total} to {computer_total}')
+            print(f'You lost to the CPU {player_total} to {computer_total}')
         else:
-            print(f'You drew with the CPU this round {player_total} to {computer_total}')
+            print(f'You drew with the CPU {player_total} to {computer_total}')
         
 
     def final_result(self, player_running_total, cpu_running_total):
@@ -122,7 +121,7 @@ class Anagram:
         elif player_running_total < cpu_running_total:
             print(f'You lost! You were defeated by the CPU {player_running_total} to {cpu_running_total} in a game of {self.rounds}')
         else:
-            print(f'A tie! You drew with the CPU {player_running_total} to {cpu_running_total} in a game of {self.rounds}')
+            print(f'A tie! You drew with the CPU {player_running_total} to {cpu_running_total} in a best of {self.rounds}')
 
 # Start function
 
@@ -130,22 +129,34 @@ class Anagram:
         player_running_total = 0
         cpu_running_total = 0
         for i in range(self.rounds):
-            print(f"Round {i + 1}")
+            print('\n')
+            print(f"***Round {i + 1}***")
+            print('\n')
             letters = self.choose_letters()
             possible_words = self.possible_word_list(letters)
             cpu_word, cpu_score = self.cpu_score_calculator(possible_words)
             longest_word = possible_words[-1]
+            print('\n')
             print(f'The longest word possible is {len(longest_word)} letters.')
+            print('\n')
             guess = self.store_guesses(letters)
             # End of Round
+            print('\n')
             print(f"Your best guess was: '{guess}'")
+            print('\n')
+            if len(guess) == len(longest_word):
+                print("Double points! Your word was the longest possible.")
+                print('\n')
+                guess = guess + guess
             print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
+            print('\n')
             print(f"The longest word was '{longest_word}'")
+            print('\n')
             self.round_result(len(guess), cpu_score)
+            print('\n')
             player_running_total += len(guess)
             cpu_running_total += cpu_score
         
         self.final_result(player_running_total, cpu_running_total)
+        print('\n')
         input("Press Enter to return to the Main Menu ")
-            # Function for running total
-            #print(f'At the end of round {} the score is Player: {player_running_total} to CPU: {cpu_running_total} ')
