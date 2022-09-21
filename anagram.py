@@ -79,7 +79,7 @@ class Anagram:
             return False
 
 
-    def points_multipliers(self):
+    
         
 
 
@@ -104,6 +104,16 @@ class Anagram:
             return ""
         else:
             return max(guessed_words, key = len)
+    
+    def points_multipliers(self, longest_word, cpu_score):
+        if len(guess) == len(longest_word):
+            print("Double points! Your word was the longest possible.")
+            print('\n')
+            guess = guess + guess
+        if cpu_score == len(longest_word):
+            print('Darn! The computer got double points!')
+            cpu_score = cpu_score * 2
+        return guess, cpu_score
 
 
     def round_result(self, player_total, computer_total):
@@ -144,10 +154,7 @@ class Anagram:
             print('\n')
             print(f"Your best guess was: '{guess}'")
             print('\n')
-            if len(guess) == len(longest_word):
-                print("Double points! Your word was the longest possible.")
-                print('\n')
-                guess = guess + guess
+            guess, cpu_score = self.points_multipliers(guess, cpu_score)
             print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
             print('\n')
             print(f"The longest word was '{longest_word}'")
