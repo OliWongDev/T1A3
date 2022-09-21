@@ -88,7 +88,6 @@ class Anagram:
     def store_guesses(self, letters):
         guesses_remaining = 3
         guessed_words = []
-        try:
             while guesses_remaining > 0:
                 user_input = input("Enter your word: ")
                 if self.validate_word(user_input, letters):
@@ -101,11 +100,11 @@ class Anagram:
                     guesses_remaining -= 1
                     # TODO FIX ERROR HANDLING
                     print(f'{user_input} cannot be made from these letters or is not in the dictionary. {guesses_remaining} guesses remaining.')
-            
-            return max(guessed_words, key = len)
-        except ValueError:
-            print("Error: You haven't entered any words.")
-            return self.store_guesses(letters)
+            if not len(guessed_words):
+                print('You haven\'t entered any valid words')
+                return ""
+            else:
+                return max(guessed_words, key = len)
 
 ## Final Screen "You won/lost/drew _ to _ against the CPU"
     def round_result(self, player_total, computer_total):
@@ -128,6 +127,8 @@ class Anagram:
 # Start function
 
     def start(self):
+        player_running_total = 0
+        cpu_running_total = 0
         for i in range(self.rounds):
             print(f"Round {i + 1}")
             letters = self.choose_letters()
@@ -141,5 +142,8 @@ class Anagram:
             print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
             print(f"The longest word was '{longest_word}'")
             self.round_result(len(guess), cpu_score)
+            player_running_total += len(guess)
+            cpu_running_total += cpu_score
+            
             # Function for running total
             #print(f'At the end of round {} the score is Player: {player_running_total} to CPU: {cpu_running_total} ')
