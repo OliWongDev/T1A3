@@ -18,17 +18,27 @@ class Anagram:
 # Function: User chooses vowels or consonants to form 9 letter anagram puzzle 
     def choose_letters(self):
         letter_list = []
-        for letter in range(9):
+        vowel_counter = 0
+        consonant_counter = 0
+        while len(letter_list) < 9:
             user_input = input("Vowel or Consonant (v/c)? ")
             if user_input == 'c':
-                print("--> You picked a consonant!")
-                letter_list.append(choose_consonant())
+                if consonant_counter < 6:
+                    letter_list.append(choose_consonant())
+                    consonant_counter += 1
+                    print("--> You picked a consonant!")
+                else:
+                    print("Maximum number of consonants is 6. Please pick a vowel.")
             elif user_input == 'v':
-                print("--> You picked a vowel!")
-                letter_list.append(choose_vowel())
-        nice_letter_list = ' '.join(letter_list)
-        os.system('clear')
-        print(nice_letter_list)
+                if vowel_counter < 5:
+                    letter_list.append(choose_vowel())
+                    vowel_counter += 1
+                    print("--> You picked a vowel!")
+                else:
+                    print("Maximum number of vowels is 5. Please pick a consonant.")
+        
+            nice_letter_list = ' '.join(letter_list)
+            print(nice_letter_list)
         return letter_list
 
 
@@ -58,9 +68,9 @@ class Anagram:
         return cpu_word, cpu_score
 
 # Function: Shuffle Letters with user input 'S'
-## Function: Hint to longest word function with user input 'H'
 
-# User input words
+
+
 # Function: Check word against english language
 
 # Function: Store input 3 times, tell user 3 guesses.
@@ -87,18 +97,22 @@ class Anagram:
             return self.store_guesses()
 
 ## Final Screen "You won/lost/drew _ to _ against the CPU"
-    def final_result(self, player_total, computer_total):
+    def round_result(self, player_total, computer_total):
         if player_total > computer_total:
-            print(f"You beat the CPU {player_total} to {computer_total}")
+            print(f"You beat the CPU this round {player_total} to {computer_total}")
         elif player_total < computer_total:
-            print(f'You lost to the CPU {player_total} to {computer_total}')
+            print(f'You lost to the CPU this round {player_total} to {computer_total}')
         elif player_total == computer_total:
-            print(f'You drew with the CPU {player_total} to {computer_total}')
+            print(f'You drew with the CPU this round {player_total} to {computer_total}')
         
-## Home/Play Again or Quit
 
-            # Restart game from difficulty option
-    
+    # def running_totals(self, player_total, computer_total):
+    #     player_running_total = 0
+    #     cpu_running_total = 0
+    #     for round in rounds:
+    #         player_running_total += player_total
+    #         cpu_running_total += computer_total
+    #     return player_running_total, cpu_running_total
 
 # Start function
 
@@ -114,6 +128,6 @@ class Anagram:
             print(f"Your best guess was: {guess}")
             print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
             print(f"The longest word was '{longest_word}'")
-
-            self.final_result(len(guess), cpu_score)
-    
+            self.round_result(len(guess), cpu_score)
+            # Function for running total
+            #print(f'At the end of round {} the score is Player: {player_running_total} to CPU: {cpu_running_total} ')

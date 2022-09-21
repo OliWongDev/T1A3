@@ -14,14 +14,14 @@ def start_menu():
 
     """
     options = ['Play', 'Rules', 'Quit']
-    option, not_needed = pick(options, title)
+    option, _ = pick(options, title)
     return option
 
 
 def pick_difficulty():
     title = "Difficulty:"
     diff_options = ['Easy', 'Medium', 'Hard']
-    diff_option, not_needed2 = pick(diff_options, title)
+    diff_option, _ = pick(diff_options, title)
     return diff_option
 
 # Remove duplicates function
@@ -31,3 +31,11 @@ def remove_duplicates(words):
         if word not in result:
             result.append(word)
     return result
+
+
+def choose_rounds():
+    rounds_prompt = "How many rounds would you like to play?"
+    rounds_options = [1, 2, 3, 4, 5]
+    menu_choice, _  = pick(rounds_options, rounds_prompt)
+
+    return menu_choice
