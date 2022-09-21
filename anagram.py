@@ -59,7 +59,7 @@ class Anagram:
 
 # Function: Shuffle Letters with user input 'S'
 ## Function: Hint to longest word function with user input 'H'
-    
+
 # User input words
 # Function: Check word against english language
 
@@ -96,8 +96,7 @@ class Anagram:
             print(f'You drew with the CPU {player_total} to {computer_total}')
         
 ## Home/Play Again or Quit
-    def end_choice(choice):
-       pass
+
             # Restart game from difficulty option
     
 
@@ -114,7 +113,7 @@ class Anagram:
             # End of Round
             print(f"Your best guess was: {guess}")
             print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
-            print(f"The longest word was {longest_word}.")
+            print(f"The longest word was '{longest_word}'")
 
             self.final_result(len(guess), cpu_score)
     
