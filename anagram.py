@@ -105,10 +105,9 @@ class Anagram:
         else:
             return max(guessed_words, key = len)
     
-    def points_multipliers(self, longest_word, cpu_score):
+    def points_multipliers(self, guess, longest_word, cpu_score):
         if len(guess) == len(longest_word):
             print("Double points! Your word was the longest possible.")
-            print('\n')
             guess = guess + guess
         if cpu_score == len(longest_word):
             print('Darn! The computer got double points!')
@@ -139,31 +138,23 @@ class Anagram:
         player_running_total = 0
         cpu_running_total = 0
         for i in range(self.rounds):
-            print('\n')
-            print(f"***Round {i + 1}***")
-            print('\n')
+            print(f" \n***Round {i + 1}***\n")
             letters = self.choose_letters()
             possible_words = self.possible_word_list(letters)
             cpu_word, cpu_score = self.cpu_score_calculator(possible_words)
             longest_word = possible_words[-1]
-            print('\n')
-            print(f'The longest word possible is {len(longest_word)} letters.')
-            print('\n')
+            print(f' \nThe longest word possible is {len(longest_word)} letters.\n')
             guess = self.store_guesses(letters)
             # End of Round
-            print('\n')
-            print(f"Your best guess was: '{guess}'")
-            print('\n')
-            guess, cpu_score = self.points_multipliers(guess, cpu_score)
-            print(f"The computer's word was '{cpu_word}' for a score of {cpu_score} points.")
-            print('\n')
-            print(f"The longest word was '{longest_word}'")
-            print('\n')
+            print(f"\nYour best guess was: '{guess}'\n")
+            guess, cpu_score = self.points_multipliers(guess, longest_word, cpu_score)
+            print(f"\nThe computer's word was '{cpu_word}' for a score of {cpu_score} points.")
+            print(f"\nThe longest word was '{longest_word}'\n")
             self.round_result(len(guess), cpu_score)
             print('\n')
             player_running_total += len(guess)
             cpu_running_total += cpu_score
-        
         self.final_result(player_running_total, cpu_running_total)
         print('\n')
         input("Press Enter to return to the Main Menu ")
+        os.system('clear')
