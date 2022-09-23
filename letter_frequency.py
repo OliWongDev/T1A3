@@ -20,3 +20,4 @@ def choose_consonant():
 
 def choose_vowel():
     return ''.join(random.choices(vowels, weights=vowel_weights, k=1))
+
