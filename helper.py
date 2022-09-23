@@ -17,6 +17,31 @@ def start_menu():
     option, _ = pick(options, title)
     return option
 
+def show_rules():
+    print('\n')
+    print(""" ** RULES **
+
+    - The user will choose the amount of rounds in the game (1 to 5). 
+
+    - The user will choose the difficulty of the CPU (Easy, Medium, Hard).
+
+    - The user will choose vowels ('v') or consonants ('c') to form a 9 letter list.
+        
+        - The minimum vowels are 3.
+
+        - The minimum consonants are 4. 
+
+    - The user will need to form a valid English word from the 9 letters given and press 'Enter' to submit. The user has 3 guesses. 
+
+    - The user loses a guess for both submitting a valid word or submitting an invalid word.
+
+    - If the user is happy with the guess they have made, they can leave the input box blank and press 'Enter' to skip to the end.
+
+    - The user gains points for that round depending on how long the word is e.g 'cart' is equal to 4 points.
+
+    - The user wins if they have a higher total points than the computer at the end of all the rounds.
+    
+    """)
 
 def pick_difficulty():
     title = "Difficulty:"
@@ -33,7 +58,7 @@ def remove_duplicates(words):
     return result
 
 
-def choose_rounds():
+def pick_rounds():
     rounds_prompt = "How many rounds would you like to play?"
     rounds_options = [1, 2, 3, 4, 5]
     menu_choice, _  = pick(rounds_options, rounds_prompt)
