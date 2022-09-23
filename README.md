@@ -26,3 +26,7 @@
 - Testing Permutations
 - Installation Instructions
 
+| Manual Tests | 
+| ----------- | ----------- | ------------ | ---------- |
+| Feature   | Expectation | Actual Outcome | Issues
+| Paragraph   | Text        |

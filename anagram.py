@@ -1,16 +1,13 @@
+import os
+import sys
 from itertools import permutations
 from pick import pick
 from english_words import web2_lower_set as english_words_set
-import random
 import helper
 from letter_frequency import choose_consonant, choose_vowel
-import os
-
-
-
 
 class Anagram:
-
+    
     def __init__(self, rounds, difficulty):
         self.rounds = rounds
         self.difficulty = difficulty
@@ -22,19 +19,20 @@ class Anagram:
         consonant_counter = 0
         while len(letter_list) < 9:
             user_input = input("Vowel or Consonant (v/c)? ")
-            if user_input == 'c':
-                if consonant_counter < 6:
-                    letter_list.append(choose_consonant())
-                    consonant_counter += 1
-                else:
-                    print("Maximum number of consonants is 6. Please pick a vowel.")
+            if user_input == 'c': 
+                    if consonant_counter < 6:
+                        letter_list.append(choose_consonant())
+                        consonant_counter += 1
+                    else:
+                        print("Maximum number of consonants is 6. Please pick a vowel.")
             elif user_input == 'v':
                 if vowel_counter < 5:
                     letter_list.append(choose_vowel())
                     vowel_counter += 1
                 else:
                     print("Maximum number of vowels is 5. Please pick a consonant.")
-        
+            else:
+                print("That was a typo! Please use 'v' for a vowel or 'c' for a consonant")
             nice_letter_list = ' '.join(letter_list)
             print(nice_letter_list)
         return letter_list
@@ -66,24 +64,24 @@ class Anagram:
 
     def validate_word(self, user_input, letters, guesses_remaining):
         # Check if user input is made up of letters in letters list
-        lt_list = letters.copy()
-        if len(user_input) < 3:
-            if len(user_input):
-                print(f"Word too short, please enter a word of 3 letters or more. {guesses_remaining - 1} guesses remaining.")
-            return False
-        if user_input in english_words_set:
-            for letter in user_input:
-                if letter not in lt_list:
-                    print(f'{user_input} cannot be made from these letters. {guesses_remaining - 1} guesses remaining.')
-                    return False
+                lt_list = letters.copy()
+                if len(user_input) < 3:
+                    if len(user_input):
+                        print((f"'{user_input}' is less than three letters. {guesses_remaining - 1} guesses remaining."))
+                        return False
+                elif user_input in english_words_set:
+                    for letter in user_input:
+                        if letter not in lt_list:
+                            print((f"'{user_input}' cannot be made from these letters. {guesses_remaining - 1} guesses remaining."))
+                            return False
+                        else:
+                            lt_list.pop(lt_list.index(letter))
+                    print(f"'{user_input}' is a valid word for a score of {len(user_input)}. {guesses_remaining - 1} guesses remaining.")
+                    return True
                 else:
-                    lt_list.pop(lt_list.index(letter))
-            print(f"'{user_input}' is a valid word for a score of {len(user_input)}. {guesses_remaining - 1} guesses remaining.")
-            return True
-        else:
-            print(f"This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
-            return False
-
+                    print(f"This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
+                    return False
+                
 
 
 # Function: Store input 3 times, tell user 3 guesses.
@@ -99,7 +97,7 @@ class Anagram:
                 elif user_input == '':
                     if len(guessed_words) == 0:
                         guesses_remaining -= 1
-                        print(f"You must make an guess to progress. {guesses_remaining} guesses remaining.")
+                        print(f"You haven't made a guess! {guesses_remaining} guesses remaining.")
                         continue
                     else:
                         break
