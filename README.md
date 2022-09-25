@@ -122,7 +122,7 @@ I have used correct casings for classes/variables/functions, limited my use of g
 
 On the other hand, I have some improvements I need to make such as using classes for exceptions/errors and paying more attention to whitespace in binary operators (e.g I have a habit towards '(2 * 6 - 1)' but PEP8 prefers '(2*6 - 1)').
 
-[View PEP8 Recommendations Here!][https://peps.python.org/pep-0008/]
+[View PEP8 Recommendations Here!](https://peps.python.org/pep-0008/)
 
 ## Developer
 
