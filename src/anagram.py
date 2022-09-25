@@ -5,7 +5,7 @@ from english_words import web2_lower_set as english_words_set
 import helper
 from letter_frequency import choose_consonant, choose_vowel
 
-
+# Class for the Anagram Game
 class Anagram:
     
     def __init__(self, rounds, difficulty):
@@ -38,7 +38,7 @@ class Anagram:
         return letter_list
 
 
-## Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
+# Function: Generate an ordered-by-length list of valid english words from the letters chosen by user. 
     def possible_word_list(self, letters):
         word_list = []
         for i in range(len(letters)):
@@ -49,7 +49,7 @@ class Anagram:
         final_list = helper.remove_duplicates(word_list)
         return final_list
 
-## Function: Calculate CPU's length of word with word list.
+# Function: Calculate CPU's length of word with word list.
     def cpu_score_calculator(self, final_list):
         if self.difficulty == 'Easy':
             cpu_word = final_list[int(round(len(final_list) * 0.45))]
@@ -62,8 +62,8 @@ class Anagram:
             cpu_score = len(cpu_word)
         return cpu_word, cpu_score
 
+# Check if user input is made up of letters in letters list  
     def validate_word(self, user_input, letters, guesses_remaining):
-        # Check if user input is made up of letters in letters list
                 lt_list = letters.copy()
                 if len(user_input) < 3:
                     if len(user_input) and not user_input == 's':
@@ -81,9 +81,8 @@ class Anagram:
                 else:
                     print(f"GibberishError: This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
                     return False
-
+# Shuffle list of letters chosen
     def shuffle_letters(self, letters):
-        # Shuffle list of letters chosen
         random.shuffle(letters)
         nice_letters = ' '.join(letters)
         print(f"\n{nice_letters}\n")
@@ -116,7 +115,8 @@ class Anagram:
             return ""
         else:
             return max(guessed_words, key = len)
-    
+
+    # Function: Multiplies individual score by 2x if user or CPU input the longest word.    
     def points_multipliers(self, guess, longest_word, cpu_score):
         if len(guess) == len(longest_word):
             print("Double points! Your word was the longest possible.")
@@ -126,7 +126,7 @@ class Anagram:
             cpu_score = cpu_score * 2
         return guess, cpu_score
 
-
+    # Function: Decides and displays the round result with a message.
     def round_result(self, player_total, computer_total, rounds):
         if player_total > computer_total:
             print(f'You beat the CPU {player_total} to {computer_total} in Round {rounds}\n')
@@ -135,7 +135,7 @@ class Anagram:
         else:
             print(f'You drew with the CPU {player_total} to {computer_total} in Round {rounds}\n')
         
-
+    # Function: Decides and displays the final result with a message.
     def final_result(self, player_running_total, cpu_running_total):
         if player_running_total > cpu_running_total:
             print(f"You won! You beat the CPU {player_running_total} to {cpu_running_total} in a {self.rounds} round game.")
@@ -144,7 +144,7 @@ class Anagram:
         else:
             print(f'A tie! You drew with the CPU {player_running_total} to {cpu_running_total} in a {self.rounds} round game.')
 
-# Start function
+    # Start function, compiles all functions into a procedural execution.
 
     def start(self):
         player_running_total = 0

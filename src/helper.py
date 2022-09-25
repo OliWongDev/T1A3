@@ -1,5 +1,5 @@
 from pick import pick
-
+# Function: Start menu appears at execution with options 'Play', 'Rules', 'Quit'
 def start_menu():
     title = """
 
@@ -18,6 +18,7 @@ def start_menu():
     option, _ = pick(options, title)
     return option
 
+# Function: Shows the rules when the user opts for 'Rules' in start menu
 def show_rules():
     print('\n')
     print(""" ** RULES **
@@ -46,13 +47,14 @@ def show_rules():
     
     """)
 
+# Function: Picks the difficulty and stores it in diff_option
 def pick_difficulty():
     title = "Difficulty:"
     diff_options = ['Easy', 'Medium', 'Hard']
     diff_option, _ = pick(diff_options, title)
     return diff_option
 
-# Remove duplicates function
+# Function: Removes the duplicates from a list of words. This means that the difficulty algorithm is not skewed by a "longer" list of words that has duplicates.
 def remove_duplicates(words):
     result = []
     for word in words:
@@ -60,7 +62,7 @@ def remove_duplicates(words):
             result.append(word)
     return result
 
-
+# Function: Picks the rounds and stores it in menu_choice
 def pick_rounds():
     rounds_prompt = "How many rounds would you like to play?"
     rounds_options = [1, 2, 3, 4, 5]

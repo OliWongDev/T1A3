@@ -55,9 +55,6 @@ Once the game has been set with the previous steps, the user can begin choosing 
 ### Shuffle Letters Option
 When the letter list is prepared, it returns the same order of the list that user was picking vowels and consonants. If the user wishes to shuffle the letters to change their thinking perspective, they may do at this point by entering the 's' key at the word input stage.
 
-
-## Logic Walkthrough
-
 ## Control Flow Diagram
 ![Flowchart](./docs/images/Assignment%20Flowchart.jpg)
 ## Testing Permutations
