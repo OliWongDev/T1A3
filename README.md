@@ -60,6 +60,16 @@ When the letter list is prepared, it returns the same order of the list that use
 ![Flowchart](./images/Assignment%20Flowchart.jpg)
 ## Testing Permutations
 
+| **PYTESTS**                                                                                                                                 |                                                                                                           |             |                    |
+|-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------|--------------------|
+| **Feature**                                                                                                                                | **Expectation**                                                                                               | **Outcome**     | **Issues**             |
+| Validate Word Function: Test word smaller than 3 letters returns False                                                                  | User inputs two letter word, thrown message and loses a guess                                             | As expected | SmallWordError     |
+| Validate Word Function: Test word greater than or equal to 3 letters, in the dictionary, but not in letters returns False               | User inputs word that exists but not in letters, thrown relevant message and loses guess                  | As expected | InvalidLetterError |
+| Validate Word Function: Test word greater than or equal to 3 letters, but not in dictionary returns False                               | User inputs word from letters that doesn't exist, thrown a message and loses a guess                      | As expected | GibberishError     |
+| Validate Word Function: Test word greater than or equal to 3 letters, in dictionary and can be made with letters provided returns True  | User inputs valid word, accepted, score returned, loses a guess, can still improve on their word or break | As expected | Nil                |
+
+
+
 ## Installation Instructions
 
 ## PEP8
