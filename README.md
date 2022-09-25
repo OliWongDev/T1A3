@@ -1,32 +1,28 @@
-# Welcome to my Anagram Terminal Game!
+# Welcome to Anagramble!
 
 ** Link to App Repository **
 ** Download link to presentation **
-** 
 
-# Contents
+## Related Docs:
+### Help File:
+### Development Log (Source Control):
 
-- Related Docs
-    -- Help File
-    -- Development Log (Source Control)
+## Software Development Plan:
+### Trello:
+![image](./images/Trello%2025.09.2022.jpg)
+## Statement of Purpose and Scope
 
-- Software Development Plan
-    - Trello
-- Statement of Purpose and Scope
-- User Features
-    - View Rules
-    - Difficulty
-    - Choosing vowels or consonants
-    - Hint to longest word possible
-    - Shuffle Function
-    - Play Again and Quit
+## User Features
+### View Rules
+### Choose Difficulty
+### Choose Number of Rounds
+### Choosing vowels or consonants
+### Shuffle Letters Option
 
-- Logic Walkthrough
-- Control Flow Diagram
-- Testing Permutations
-- Installation Instructions
+## Logic Walkthrough
 
-| Manual Tests | 
-| ----------- | ----------- | ------------ | ---------- |
-| Feature   | Expectation | Actual Outcome | Issues
-| Paragraph   | Text        |
+## Control Flow Diagram
+![image](./images/Assignment%Flowchart.jpg)
+## Testing Permutations
+
+## Installation Instructions
