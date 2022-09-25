@@ -24,7 +24,7 @@ The development course was primarily done using Trello, an Agile-friendly softwa
 
 I have listed an example of how my Trello board looked during the development cycle.
 
-![Trello](./images/Trello%2025.09.2022.jpg)
+![Trello](./src/images/Trello%2025.09.2022.jpg)
 
 ## Statement of Purpose and Scope
 ### Why?
@@ -57,7 +57,7 @@ When the letter list is prepared, it returns the same order of the list that use
 ## Logic Walkthrough
 
 ## Control Flow Diagram
-![Flowchart](./images/Assignment%20Flowchart.jpg)
+![Flowchart](./src/images/Assignment%20Flowchart.jpg)
 ## Testing Permutations
 
 | **PYTESTS**                                                                                                                                 |                                                                                                           |             |                    |
