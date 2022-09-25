@@ -3,6 +3,8 @@
 ** Link to App Repository **
 ** Download link to presentation **
 
+![Home Screen](./docs/images/Main%20Screen.jpg)
+
 ## Related Docs:
 
 ### Help File:
