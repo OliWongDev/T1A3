@@ -1,0 +1,197 @@
+commit 90efe4f17c41f4c04a5ba2e67df5daf27e7c8093
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 19:03:26 2022 +1000
+
+    Requirements file update
+
+commit ea0423141ae1cc8cdd89a28991705b31f625e516
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 18:58:24 2022 +1000
+
+    Markdown edits
+
+commit fa863d5742aa16557920bd268acc582f9360a3b6
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 18:50:44 2022 +1000
+
+    Markdown check
+
+commit ada3edb1b5114e9c7f25e61a0efd3a76291e8f51
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 18:49:42 2022 +1000
+
+    Markdown edits
+
+commit 653fbf9fb2e759ea2aa67b0f87f9ff54255b72f6
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 17:02:31 2022 +1000
+
+    Shuffle add to rules and print
+
+commit fb5be19411d676337e5abc0e9f9a806e9cdd5729
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 16:59:10 2022 +1000
+
+    Add Shuffle Feature
+
+commit 874320a8e085fc89e93a8a8fbbdbbaa63c3a1a66
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 16:52:59 2022 +1000
+
+    Remove Duplicates Test Add
+
+commit 7e4274fb0552e4bab56956a4527227768ba7e5f5
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sat Sep 24 04:48:28 2022 +1000
+
+    Markdown Tests Add
+
+commit b25a803ca8253dc34a9bd25475c44efecd39ef38
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sat Sep 24 00:53:59 2022 +1000
+
+    Anagram validate words function test file add
+
+commit c5547765955381c2c05d3b453dd0fa40f0899bef
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Fri Sep 23 23:00:43 2022 +1000
+
+    Whitespace enter error handling add
+
+commit 066df58ec2b4844d3028d1c6e0894ec1f004a2a4
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Fri Sep 23 21:21:35 2022 +1000
+
+    Game clears for new game at end add
+
+commit cd8c8927a06b8cec738041c2e4211cf2ba9a3d9d
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Fri Sep 23 21:08:07 2022 +1000
+
+    Rules function DRY
+
+commit 4238e7260ee3fdf9698b82dd9ad993c125276e3b
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 02:56:37 2022 +1000
+
+    Multipliers beginning
+
+commit 633487342aedd33326637bd2a06dfb7d1d059b04
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 02:43:23 2022 +1000
+
+    New line adds and points multiplier
+
+commit 24c9b648746c13e73845427c1257ab955a14c528
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 01:54:52 2022 +1000
+
+    Rules text add
+
+commit b67387cf896cdfa188f92900c849dac93f1d6bbc
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 01:29:40 2022 +1000
+
+    End game fixes
+
+commit 460d317a4efb2cbbee7555550a88b3cd32a7b194
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 01:08:27 2022 +1000
+
+    Improve stored guesses logic
+
+commit 432f27a3748e7786259c568a7dcac391d4749f96
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 00:55:15 2022 +1000
+
+    Add rounds and error handling for user inputs
+
+commit de93a3d1ec78d457e0b9b4ee7aea8364d3197fe9
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Thu Sep 22 00:31:10 2022 +1000
+
+    Minimum consonants and vowels add
+
+commit 2942f66f249ee82aa05cf09dac1e1a1bb10e35a7
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 23:12:57 2022 +1000
+
+    Rules and Quit functioning
+
+commit 4cb655da5b4ab7ab06086663033cb295ee651b18
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 22:40:17 2022 +1000
+
+    ASCII Title Add
+
+commit 75aa565d2056c412f08d3a77ec1255cefb9d1b95
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 03:15:20 2022 +1000
+
+    Bash Script Draft Add
+
+commit 24bdfe0e59e1378fcd6505d744eb968969aa4675
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 02:36:12 2022 +1000
+
+    Start function change
+
+commit 73102aa7bfb4488f9c82d5ddfa66bb43424fddd6
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 02:21:28 2022 +1000
+
+    Longest word function remove DRY
+
+commit 392d1d5759c62583a0b6d5e915183f3400be4760
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 02:13:44 2022 +1000
+
+    Store guesses function add
+
+commit 66e024c8b3db395a2987ae157c881427112d72fc
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Wed Sep 21 00:42:04 2022 +1000
+
+    Modify CPU score and longest word functions
+
+commit 134a4ae1a8b303f2196e88c2debfb8ad3b666408
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Tue Sep 20 23:55:19 2022 +1000
+
+    Further anagram functions add
+
+commit 63b1212163fe7bf42c06d430192d90be757e8d39
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Tue Sep 20 02:53:56 2022 +1000
+
+    Score tally functions add
+
+commit 39778d7bcd1d55a4d76cec02da95128cece64e60
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Tue Sep 20 02:33:00 2022 +1000
+
+    Difficulty Functions
+
+commit b7cc0af8844743b423eab39235a0ea5c2e17fb71
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Tue Sep 20 01:25:48 2022 +1000
+
+    Letter list function add
+
+commit ed12ca0e03ea8d3ea2a9e6df8ff9acd0189bcc10
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Mon Sep 19 23:04:47 2022 +1000
+
+    Requirements file generate
+
+commit ce7cd39b135b9effa56bf458ad4243685cd3e788
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Mon Sep 19 21:49:21 2022 +1000
+
+    Venv ignore first VS Code commit
+
+commit 7922de48fde34da042e8023f6109db6daf00af66
+Author: OliverWongDev <103920042+JimmyNeutronDance@users.noreply.github.com>
+Date:   Mon Sep 19 21:18:48 2022 +1000
+
+    Initial commit
