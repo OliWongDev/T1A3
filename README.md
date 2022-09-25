@@ -66,7 +66,7 @@ When the letter list is prepared, it returns the same order of the list that use
 ## Control Flow Diagram
 
 ![Flowchart](./docs/images/Assignment%20Flowchart.jpg)
-## Testing Permutations
+## Testing Ledger
 
 
 | **PYTESTS**                                                                                                                                 |                                                                                                           |             |                    |

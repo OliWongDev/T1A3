@@ -1,3 +1,93 @@
+commit 53a6865b0d96d5ed52c5c1320114908de48b0c16
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 23:22:14 2022 +1000
+
+    Link error fix
+
+commit 9b5912d15adef387663be1000569c697b489e55e
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 23:19:45 2022 +1000
+
+    PEP8 Add
+
+commit b6958b8a6d1e1d9b87ef6152e2f354f9db4c1249
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 23:03:12 2022 +1000
+
+    PPT Folder Add
+
+commit 07ef639282057ef57288fb95848a1ef37fc7cb2c
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 22:58:17 2022 +1000
+
+    Help File
+
+commit 733da8d94da88d935906107e8dab5b20b416d9cc
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 22:06:36 2022 +1000
+
+    Comments on python files add
+
+commit 367f11d8730e0c47a6dfbd09a09a7879f665ec63
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 21:42:07 2022 +1000
+
+    Main Screen add
+
+commit 34469bee774ed5c8d97bb34f23f6a4cc8a52776a
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 21:37:12 2022 +1000
+
+    Instructions Add
+
+commit 00c4dede45a51eb3f297544365bab52d31be5ced
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 21:20:27 2022 +1000
+
+    Relative path fix
+
+commit 5609481a0e298c9df1be3edca0c24073c468712b
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 21:15:26 2022 +1000
+
+    Bash Script add
+
+commit 15fc8bed543a3e17f1e143e3a4226f319b2db168
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 20:41:17 2022 +1000
+
+    Test
+
+commit cc96a91fd0cfea21566a7db4f36566d1077b1504
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 20:38:09 2022 +1000
+
+    Markdown test check 2
+
+commit 2651bbd8b4a0b78193f8c2319fc1af9a08e155e9
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 20:35:01 2022 +1000
+
+    Markdown test check
+
+commit 114f349a1bbc7b6d8e4ee7062bb136dfe1c6bc25
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 20:14:11 2022 +1000
+
+    Error messages add
+
+commit 880da2b5943f154d8a0725e81b494e53d0ba541f
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 19:58:55 2022 +1000
+
+    README Add
+
+commit 25dd14cd5f23eaa7f088d946d9098bfef579e635
+Author: JimmyNeutronDance <14wongom@gmail.com>
+Date:   Sun Sep 25 19:05:52 2022 +1000
+
+    Git Log File Create
+
 commit 90efe4f17c41f4c04a5ba2e67df5daf27e7c8093
 Author: JimmyNeutronDance <14wongom@gmail.com>
 Date:   Sun Sep 25 19:03:26 2022 +1000
