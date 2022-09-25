@@ -116,4 +116,14 @@ When the letter list is prepared, it returns the same order of the list that use
 
 ## PEP8
 
-## Improvements
+During the course of my development I was able to create a program I am proud of due to the PEP8 style conventions. 
+
+I have used correct casings for classes/variables/functions, limited my use of global variables, attempted to conform to Object-Oriented Programming code blocks, commented all functions, imported modules using different lines and used triple backticks for strings which end on separate lines to name a few.
+
+On the other hand, I have some improvements I need to make such as using classes for exceptions/errors and paying more attention to whitespace in binary operators (e.g I have a habit towards '(2 * 6 - 1)' but PEP8 prefers '(2*6 - 1)').
+
+[View PEP8 Recommendations Here!][https://peps.python.org/pep-0008/]
+
+## Developer
+
+Oliver Wong
