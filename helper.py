@@ -33,6 +33,8 @@ def show_rules():
 
     - The user will need to form a valid English word from the 9 letters given and press 'Enter' to submit. The user has 3 guesses. 
 
+    - The user can shuffle the letters by entering the 's' key during their guesses.
+
     - The user loses a guess for both submitting a valid word or submitting an invalid word.
 
     - If the user is happy with the guess they have made, they can leave the input box blank and press 'Enter' to skip to the end.

@@ -93,7 +93,7 @@ class Anagram:
         guesses_remaining = 3
         guessed_words = []
         while guesses_remaining > 0:
-                user_input = input("Enter your word: ")
+                user_input = input("Enter your word or enter 's' to shuffle: ")
                 user_input = user_input.strip()
                 if self.validate_word(user_input, letters, guesses_remaining):
                     guesses_remaining -= 1
