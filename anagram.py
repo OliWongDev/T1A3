@@ -24,15 +24,15 @@ class Anagram:
                         letter_list.append(choose_consonant())
                         consonant_counter += 1
                     else:
-                        print("Maximum number of consonants is 6. Please pick a vowel.")
+                        print("MaxConsonantError: Maximum number of consonants is 6. Please pick a vowel.")
             elif user_input == 'v':
                 if vowel_counter < 5:
                     letter_list.append(choose_vowel())
                     vowel_counter += 1
                 else:
-                    print("Maximum number of vowels is 5. Please pick a consonant.")
+                    print("MaxVowelError: Maximum number of vowels is 5. Please pick a consonant.")
             else:
-                print("That was a typo! Please use 'v' for a vowel or 'c' for a consonant")
+                print("ChooseTypoError: That was a typo! Please use 'v' for a vowel or 'c' for a consonant")
             nice_letter_list = ' '.join(letter_list)
             print(nice_letter_list)
         return letter_list
@@ -67,22 +67,23 @@ class Anagram:
                 lt_list = letters.copy()
                 if len(user_input) < 3:
                     if len(user_input) and not user_input == 's':
-                        print((f"'{user_input}' is less than three letters. {guesses_remaining - 1} guesses remaining."))
+                        print((f"SmallWordError: '{user_input}' is less than three letters. {guesses_remaining - 1} guesses remaining."))
                         return False
                 elif user_input in english_words_set:
                     for letter in user_input:
                         if letter not in lt_list:
-                            print((f"'{user_input}' cannot be made from these letters. {guesses_remaining - 1} guesses remaining."))
+                            print((f"InvalidLetterError: '{user_input}' cannot be made from these letters. {guesses_remaining - 1} guesses remaining."))
                             return False
                         else:
                             lt_list.pop(lt_list.index(letter))
                     print(f"'{user_input}' is a valid word for a score of {len(user_input)}. {guesses_remaining - 1} guesses remaining.")
                     return True
                 else:
-                    print(f"This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
+                    print(f"GibberishError: This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
                     return False
 
     def shuffle_letters(self, letters):
+        # Shuffle list of letters chosen
         random.shuffle(letters)
         nice_letters = ' '.join(letters)
         print(f"\n{nice_letters}\n")
@@ -104,7 +105,7 @@ class Anagram:
                 elif user_input == '':
                     if len(guessed_words) == 0:
                         guesses_remaining -= 1
-                        print(f"You haven't made a guess! {guesses_remaining} guesses remaining.")
+                        print(f"BlankError: You haven't made a guess! {guesses_remaining} guesses remaining.")
                         continue
                     else:
                         break
