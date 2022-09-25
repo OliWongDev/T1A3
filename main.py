@@ -1,10 +1,7 @@
-# from itertools import permutations
-from english_words import english_words_set
-from helper import *
-from letter_frequency import choose_consonant, choose_vowel
-from anagram import Anagram
 import os
 import sys
+from helper import *
+from anagram import Anagram
 
 
 while True:

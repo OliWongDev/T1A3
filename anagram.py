@@ -1,7 +1,5 @@
 import os
-import sys
 from itertools import permutations
-from pick import pick
 from english_words import web2_lower_set as english_words_set
 import helper
 from letter_frequency import choose_consonant, choose_vowel
