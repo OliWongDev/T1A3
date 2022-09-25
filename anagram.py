@@ -3,6 +3,7 @@ from itertools import permutations
 from english_words import web2_lower_set as english_words_set
 import helper
 from letter_frequency import choose_consonant, choose_vowel
+import random
 
 class Anagram:
     
@@ -64,7 +65,7 @@ class Anagram:
         # Check if user input is made up of letters in letters list
                 lt_list = letters.copy()
                 if len(user_input) < 3:
-                    if len(user_input):
+                    if len(user_input) and not user_input == 's':
                         print((f"'{user_input}' is less than three letters. {guesses_remaining - 1} guesses remaining."))
                         return False
                 elif user_input in english_words_set:
@@ -79,6 +80,11 @@ class Anagram:
                 else:
                     print(f"This word is not in the dictionary. {guesses_remaining - 1} guesses remaining.")
                     return False
+
+    def shuffle_letters(self, letters):
+        random.shuffle(letters)
+        nice_letters = ' '.join(letters)
+        print(f"\n{nice_letters}\n")
                 
 
 
@@ -92,6 +98,8 @@ class Anagram:
                 if self.validate_word(user_input, letters, guesses_remaining):
                     guesses_remaining -= 1
                     guessed_words.append(user_input)
+                elif user_input == "s":
+                    self.shuffle_letters(letters)
                 elif user_input == '':
                     if len(guessed_words) == 0:
                         guesses_remaining -= 1
