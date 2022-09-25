@@ -9,7 +9,7 @@
 
 ## Software Development Plan:
 ### Trello:
-![image](./images/Trello%2025.09.2022.jpg)
+![Trello](./images/Trello%2025.09.2022.jpg)
 ## Statement of Purpose and Scope
 
 ## User Features
@@ -22,7 +22,7 @@
 ## Logic Walkthrough
 
 ## Control Flow Diagram
-![image](./images/Assignment%20Flowchart.jpg
+![Flowchart](./images/Assignment%20Flowchart.jpg)
 ## Testing Permutations
 
 ## Installation Instructions
