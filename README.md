@@ -1,13 +1,16 @@
 # Welcome to Anagramble!
 
-** Link to App Repository **
-** Download link to presentation **
+[Link to Github Repository!](https://github.com/JimmyNeutronDance/T1A3)
+
+[Link to Vimeo Presentation!](https://vimeo.com/753524399/6734b87fac)
 
 ![Home Screen](./docs/images/Main%20Screen.jpg)
 
 ## Related Docs:
 
 ### Help File:
+
+The 'help.md' file is a short document to install the application. These instructions are featured in the README below but can be condensely accessed in the Help file.
 
 ### Development Log (Source Control):
 
@@ -45,19 +48,26 @@ The target audience of the program is future employers who would like to view my
 
 ## User Features
 ### View Rules
+
 The user can view the rules of the game at the main menu by selecting the 'Rules' option with the enter key (move with the arrow keys). These rules outline the way the game works from a user perspective and informs the user that there are certain rules that may arise during the game. 
 ### Choose Number of Rounds
+
 Once the user has opted to 'Play', the user can set the number of rounds they would like to play from 1 to 5. The scores for the game are a running total of all individual round scores and not a 'Best of x' style game.
 ### Choose Difficulty
+
 Once the user has opted to 'Pick Rounds', the user can set the difficulty of the CPU to Easy, Medium or Hard. The difficulty is an function that generates the possible words from the letters the user chooses, sorts them into word-length order and selects their word as a percentile of the possible list. For example, the Medium difficulty takes the word that is at the 65th percentile point on the index.
 ### Choosing vowels or consonants
+
 Once the game has been set with the previous steps, the user can begin choosing vowels or consonants to form the 9 letter list. The user chooses a vowel with 'v' and a consonant with 'c'. There are maximums of 5 vowels and 6 consonants. If these limits are reached, the user must re-pick the other option until 9. 
 ### Shuffle Letters Option
+
 When the letter list is prepared, it returns the same order of the list that user was picking vowels and consonants. If the user wishes to shuffle the letters to change their thinking perspective, they may do at this point by entering the 's' key at the word input stage.
 
 ## Control Flow Diagram
+
 ![Flowchart](./docs/images/Assignment%20Flowchart.jpg)
 ## Testing Permutations
+
 
 | **PYTESTS**                                                                                                                                 |                                                                                                           |             |                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------|--------------------|
